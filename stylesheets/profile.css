@@ -19,20 +19,20 @@
 }
 
 /* line 20, ../sass/profile.scss */
-.jumbotron jumbofirst {
+.jumbotron {
   border-style: solid;
-  border-width: 4px;
-  border-color: #000;
+  border-width: 1px;
+  border-color: #fff;
+  border-radius: 1px;
 }
 
-/* line 26, ../sass/profile.scss */
+/* line 27, ../sass/profile.scss */
 #description {
   text-align: center;
 }
 
-/* line 31, ../sass/profile.scss */
+/* line 32, ../sass/profile.scss */
 .editBtn {
-  margin-left: 68%;
   background-color: #3EE6AA;
   border: none;
 }
@@ -42,6 +42,193 @@
 }
 
 /* line 40, ../sass/profile.scss */
-.BIO {
+.Bio {
   color: #515151;
+}
+
+/* line 44, ../sass/profile.scss */
+.profileHeading {
+  color: #0275D8;
+  font-family: "Monseratti";
+  font-size: 15px;
+}
+
+/* line 50, ../sass/profile.scss */
+.profileDescription {
+  color: #4d9ee3;
+  font-family: "Monseratti";
+}
+
+/* line 54, ../sass/profile.scss */
+.profileAnswer {
+  display: inline;
+  top: 17.5%;
+  position: absolute;
+  left: 22%;
+}
+
+/* line 61, ../sass/profile.scss */
+.profilePicture {
+  width: 20em;
+  height: 20em;
+}
+
+/* line 67, ../sass/profile.scss */
+.jumbotronINFO {
+  height: 27em;
+}
+
+/* line 71, ../sass/profile.scss */
+.profileDescription2 {
+  top: 17.5%;
+}
+
+/* line 77, ../sass/profile.scss */
+.containerChatbox {
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 82, ../sass/profile.scss */
+.header {
+  padding: 20px 20px 18px 20px;
+  background: #5FB471;
+  color: #fff;
+}
+
+/* line 87, ../sass/profile.scss */
+.header h2 {
+  font-size: 16px;
+  line-height: 15px;
+  display: inline-block;
+}
+
+/* line 92, ../sass/profile.scss */
+.header a {
+  display: inline-block;
+  float: right;
+  background: #3d8b4e;
+  font-size: 25px;
+  line-height: 20px;
+  padding: 3px 6px;
+  margin-top: -5px;
+  border-radius: 2px;
+}
+
+/* line 102, ../sass/profile.scss */
+.chat-box, .enter-message {
+  background: #ECECEC;
+  padding: 0 20px;
+  color: #a1a1a1;
+}
+
+/* line 107, ../sass/profile.scss */
+.chat-box .message-box {
+  padding: 18px 0 10px;
+  clear: both;
+}
+
+/* line 111, ../sass/profile.scss */
+.message-box .picture {
+  float: left;
+  width: 50px;
+  display: block;
+  padding-right: 10px;
+}
+
+/* line 117, ../sass/profile.scss */
+.picture img {
+  width: 43px;
+  height: 48px;
+  border-radius: 5px;
+}
+
+/* line 122, ../sass/profile.scss */
+.picture span {
+  font-weight: bold;
+  font-size: 12px;
+  clear: both;
+  display: block;
+  text-align: center;
+  margin-top: 3px;
+}
+
+/* line 130, ../sass/profile.scss */
+.message {
+  background: #fff;
+  display: inline-block;
+  padding: 13px;
+  width: 274px;
+  border-radius: 2px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+  position: relative;
+}
+
+/* line 139, ../sass/profile.scss */
+.message:before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  border-right: 6px solid #fff;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  top: 10px;
+  margin-left: -6px;
+}
+
+/* line 150, ../sass/profile.scss */
+.message span {
+  color: #555;
+  font-weight: bold;
+}
+
+/* line 154, ../sass/profile.scss */
+.message p {
+  padding-top: 5px;
+}
+
+/* line 157, ../sass/profile.scss */
+.message-box.right-img .picture {
+  float: right;
+  padding: 0;
+  padding-left: 10px;
+}
+
+/* line 162, ../sass/profile.scss */
+.message-box.right-img .picture img {
+  float: right;
+}
+
+/* line 165, ../sass/profile.scss */
+.message-box.right-img .message:before {
+  left: 100%;
+  margin-right: 6px;
+  margin-left: 0;
+  border-right: 6px solid transparent;
+  border-left: 6px solid #fff;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+}
+
+/* line 174, ../sass/profile.scss */
+.enter-message {
+  padding: 13px 0px;
+}
+
+/* line 177, ../sass/profile.scss */
+.enter-message input {
+  border: none;
+  padding: 10px 12px;
+  background: #d3d3d3;
+  width: 260px;
+  border-radius: 2px;
+}
+
+/* line 184, ../sass/profile.scss */
+.enter-message a.send {
+  padding: 10px 15px;
+  background: #6294c2;
+  border-radius: 2px;
+  float: right;
 }

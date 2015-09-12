@@ -17,10 +17,11 @@
  	height: 15%;
 }
 
-.jumbotron jumbofirst {
+.jumbotron {
 	border-style: solid;
-	border-width: 4px;
-	border-color: #000;
+	border-width: 1px;
+	border-color: #fff;
+	border-radius: 1px;
 }
 
 #description {
@@ -29,7 +30,6 @@
 }
 
 .editBtn {
-	margin-left: 68%;
 	background-color: #3EE6AA;
 	border: none;
 	&:hover {
@@ -37,6 +37,154 @@
 	}
 }
 
-.BIO {
+.Bio {
 	color: #515151;
+}	
+
+.profileHeading {
+	color: #0275D8;
+	font-family: "Monseratti";
+	font-size: 15px;
 }
+
+.profileDescription {
+	color: #4d9ee3;
+	font-family: "Monseratti";
+}
+.profileAnswer {
+	 display: inline;
+    top: 17.5%;
+    position: absolute;
+    left: 22%;
+}
+
+.profilePicture {
+	width: 20em;
+	height: 20em;
+
+}
+
+.jumbotronINFO {
+	height: 27em;
+}
+
+.profileDescription2 {
+    top: 17.5%;
+}
+
+// Chatbox
+
+.containerChatbox{
+  display:block;
+  margin:0 auto;
+}
+
+.header{
+  padding:20px 20px 18px 20px;
+  background:#5FB471;
+  color:#fff;
+}
+.header h2{
+  font-size:16px;
+  line-height:15px;
+  display:inline-block;
+}
+.header a{
+  display:inline-block;
+  float:right;
+  background:#3d8b4e;
+  font-size:25px;
+  line-height:20px;
+  padding:3px 6px;
+  margin-top:-5px;
+  border-radius:2px;
+}
+.chat-box, .enter-message{
+  background:#ECECEC;
+  padding:0 20px;
+  color:#a1a1a1;
+}
+.chat-box .message-box{
+  padding:18px 0 10px;
+  clear:both;
+}
+.message-box .picture{
+  float:left;
+  width:50px;
+  display:block;
+  padding-right:10px;
+}
+.picture img{
+  width:43px;
+  height:48px;
+  border-radius:5px;
+}
+.picture span{
+  font-weight:bold;
+  font-size:12px;
+  clear:both;
+  display:block;
+  text-align:center;
+  margin-top:3px;
+}
+.message{
+  background:#fff;
+  display:inline-block;
+  padding:13px;
+  width:274px;
+  border-radius:2px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.04);
+  position:relative;
+}
+.message:before{
+  content:"";
+  position:absolute;
+  display:block;
+  left:0;
+  border-right:6px solid #fff;
+  border-top: 6px solid transparent;
+  border-bottom:6px solid transparent;
+  top:10px;
+  margin-left:-6px;
+}
+.message span{
+  color:#555;
+  font-weight:bold;
+}
+.message p{
+  padding-top:5px;
+}
+.message-box.right-img .picture{
+  float:right;
+  padding:0;
+  padding-left:10px;
+}
+.message-box.right-img .picture img{
+  float:right;
+}
+.message-box.right-img .message:before{
+  left:100%;
+  margin-right:6px;
+  margin-left:0;
+  border-right:6px solid transparent;
+  border-left:6px solid #fff;
+  border-top: 6px solid transparent;
+  border-bottom:6px solid transparent;
+}
+.enter-message{
+  padding:13px 0px;
+}
+.enter-message input{
+  border:none;
+  padding:10px 12px;
+  background:#d3d3d3;
+  width:260px;
+  border-radius:2px;
+}
+.enter-message a.send{
+  padding:10px 15px;
+  background:#6294c2;
+  border-radius:2px;
+  float:right;
+}
+
