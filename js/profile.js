@@ -25,6 +25,15 @@ function profileViewModel() {
         self.loaded(true);
         $('body').css('overflow', "auto");
 
+        $.ajax({
+            method: "POST",
+            dataType: 'json',
+            url: 'modules/addRelation.php',
+            data: {action: 'get', user_id: homeVM.user_data()['id']}
+        }).done(function(result) {
+            c(result);
+        });
+
         setInterval(function() {
             $.ajax({
                 method: "POST",
