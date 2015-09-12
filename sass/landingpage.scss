@@ -3,23 +3,45 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "compass/reset";
+@import "compass/reset"; // RESET
+@import 'fonts'; // LOCAL FONTS
+
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.clearfix {
+	@include clearfix;
+}
+
+
+
 
 body {
 	padding: 0;
 	margin: 0;
 }
-.container-fluid {
+
+ .container-fluid {
   position: relative;
 
-  img.landingpage {
+  .heroContainer {
+    position: relative;
+    width: 66%;
+
+  img.landingpage {	
     /* Set rules to fill background */
     min-height: 100%;
     min-width: 1024px;
-    opacity: .9;
-    background-color: black;
+	opacity: .9;
+	background-color: black;
     position: absolute;
-    left: 0; top: 0; height: 256px; width: 256px;
+    left: 0;Stop: 0; height: 256px; width: 256px;
   	
     /* Set up proportionate scaling */
     width: 100%;
@@ -35,6 +57,59 @@ body {
     img.landingpage {
       left: 50%;
       margin-left: -512px;   /* 50% */
+    }
+  }
+  
+
+  .companyName {
+  	position: relative;
+  	font-family: "Montserrat";
+  	color: #fff;
+	 font-size: 2em;
+    margin-left: 11%;
+    margin-top: 8%;
+
+  }
+
+  .companyHeader {
+	position: relative;
+  	font-family: "Montserrat";
+  	color: #fff;
+  	font-size: 1em;
+    margin-left: 11%;
+    margin-bottom: 10%;	
+    
+  }
+
+  .Slogan {
+    font-size: 3em;
+    text-align: center;
+    margin-top: 8%;
+    position: relative;
+  	font-family: "Montserrat";
+  	color: #fff;
+  }
+
+   .Slogan2 {
+    font-size: 3em;
+    text-align: center;
+    position: relative;
+    font-family: "Montserrat";
+    color: #fff;
+  }
+
+  .clickBait {
+        width: 81%;
+        height: 50px;
+        position: relative;
+        margin-left: 9%;
+        margin-top: 5%;
+        border-radius: 10px;
+        color: #55ACEE;
+        font-size: 2em;
+        border: 0;
+        background-color: #fff;
+
     }
   }
 }

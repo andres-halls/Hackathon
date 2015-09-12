@@ -67,18 +67,72 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 8, ../sass/landingpage.scss */
+@font-face {
+  font-weight: 200;
+  font-style: normal;
+  font-family: "Roboto";
+  src: url("fonts/Roboto-Thin.ttf");
+}
+@font-face {
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Roboto";
+  src: url("fonts/Roboto-Bold.ttf");
+}
+@font-face {
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Roboto";
+  src: url("fonts/Roboto-Regular.ttf");
+}
+@font-face {
+  font-weight: 200;
+  font-style: normal;
+  font-family: "Roboto";
+  src: url("fonts/Roboto-Thin.ttf");
+}
+@font-face {
+  font-weight: 200;
+  font-style: normal;
+  font-family: "Montserrat";
+  src: url("fonts/Roboto-Light.otf");
+}
+@font-face {
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Montserrat";
+  src: url("fonts/Roboto-Regular.otf");
+}
+@font-face {
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Montserrat";
+  src: url("fonts/Roboto-Bold.otf");
+}
+/* line 11, ../sass/landingpage.scss */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 25, ../sass/landingpage.scss */
 body {
   padding: 0;
   margin: 0;
 }
 
-/* line 12, ../sass/landingpage.scss */
+/* line 30, ../sass/landingpage.scss */
 .container-fluid {
   position: relative;
 }
-/* line 15, ../sass/landingpage.scss */
-.container-fluid img.landingpage {
+/* line 33, ../sass/landingpage.scss */
+.container-fluid .heroContainer {
+  position: relative;
+  width: 66%;
+}
+/* line 37, ../sass/landingpage.scss */
+.container-fluid .heroContainer img.landingpage {
   /* Set rules to fill background */
   min-height: 100%;
   min-width: 1024px;
@@ -86,7 +140,7 @@ body {
   background-color: black;
   position: absolute;
   left: 0;
-  top: 0;
+  Stop: 0;
   height: 256px;
   width: 256px;
   /* Set up proportionate scaling */
@@ -98,14 +152,62 @@ body {
   left: 0;
 }
 @media screen and (max-width: 1024px) {
-  /* line 12, ../sass/landingpage.scss */
-  .container-fluid {
+  /* line 33, ../sass/landingpage.scss */
+  .container-fluid .heroContainer {
     /* Specific to this particular image */
   }
-  /* line 35, ../sass/landingpage.scss */
-  .container-fluid img.landingpage {
+  /* line 57, ../sass/landingpage.scss */
+  .container-fluid .heroContainer img.landingpage {
     left: 50%;
     margin-left: -512px;
     /* 50% */
   }
+}
+/* line 64, ../sass/landingpage.scss */
+.container-fluid .heroContainer .companyName {
+  position: relative;
+  font-family: "Montserrat";
+  color: #fff;
+  font-size: 2em;
+  margin-left: 11%;
+  margin-top: 8%;
+}
+/* line 74, ../sass/landingpage.scss */
+.container-fluid .heroContainer .companyHeader {
+  position: relative;
+  font-family: "Montserrat";
+  color: #fff;
+  font-size: 1em;
+  margin-left: 11%;
+  margin-bottom: 10%;
+}
+/* line 84, ../sass/landingpage.scss */
+.container-fluid .heroContainer .Slogan {
+  font-size: 3em;
+  text-align: center;
+  margin-top: 8%;
+  position: relative;
+  font-family: "Montserrat";
+  color: #fff;
+}
+/* line 93, ../sass/landingpage.scss */
+.container-fluid .heroContainer .Slogan2 {
+  font-size: 3em;
+  text-align: center;
+  position: relative;
+  font-family: "Montserrat";
+  color: #fff;
+}
+/* line 101, ../sass/landingpage.scss */
+.container-fluid .heroContainer .clickBait {
+  width: 81%;
+  height: 50px;
+  position: relative;
+  margin-left: 9%;
+  margin-top: 5%;
+  border-radius: 10px;
+  color: #55ACEE;
+  font-size: 2em;
+  border: 0;
+  background-color: #fff;
 }
