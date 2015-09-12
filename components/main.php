@@ -30,7 +30,6 @@
     <!-- Site JS & CSS -->
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
     <script type="text/javascript" src="js/home.js"></script>
-    <script type="text/javascript" src="js/login.js"></script>
     <script type="text/javascript" src="js/profile.js"></script>
     <script type="text/javascript" src="js/chat.js"></script>
     <script type="text/javascript" src="js/nav.js"></script>
@@ -41,7 +40,6 @@
     <?php
 
         require("components/home.php");
-        require("components/login.php");
         require("components/profile.php");
         require("components/chat.php");
 

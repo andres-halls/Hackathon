@@ -6,4 +6,8 @@ function homeViewModel() {
     var self = this;
     self.view = '#';
     self.loaded = ko.observable(true);
+
+    self.login = function() {
+        c('login'); // TODO
+    }
 }
