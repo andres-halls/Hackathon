@@ -37,8 +37,8 @@ if (isset($_POST["signature"])) {
         $idCode = $_SESSION['user']['identificationCode'];
         $country = $_SESSION['user']['organization'];
 
-        $db = mysql_connect('localhost', 'eresnetw_admin', 'Password1') or die( mysql_error() );
-        mysql_select_db( 'eresnetw_data', $db ) or die( mysql_error() );
+        $db = mysql_connect('kmm.deca.ee', 'c3kmm', 'ltl#4HPW') or die( mysql_error() );
+        mysql_select_db( 'c3kmm', $db ) or die( mysql_error() );
         $q = 'SELECT id FROM users WHERE id_code="'.$idCode.'" AND organization="'.$country.'"';
         $res = mysql_query($q);
 
@@ -50,7 +50,7 @@ if (isset($_POST["signature"])) {
             $dob = $idCodeToDate->doMagicWithPersonalcode()['DateOfBirth'];
             $q = 'INSERT INTO `users`(`id_code`, `name`, `dateofbirth`, `organization`) VALUES ("'.$idCode.'","'.$_SESSION['user']['firstName'].' '.$_SESSION['user']['lastName'].'","'.$dob.'","'.$country.'")';
             $res = mysql_query($q);
-            $user_ID = mysql_fetch_assoc($res)['id'];
+            $user_ID = mysql_insert_id($res)['id'];
         }
 
         $_SESSION['user']['DateOfBirth'] = $dob;

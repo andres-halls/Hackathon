@@ -23,6 +23,7 @@ function profileViewModel() {
 
     self.init = function() {
         self.loaded(true);
+        $('body').css('overflow', "auto");
 
         setInterval(function() {
             $.ajax({
@@ -34,7 +35,7 @@ function profileViewModel() {
                 self.chatMessages(messages);
             });
         }, 1000);
-    }
+    };
 
     // Socket IO
 
@@ -70,4 +71,17 @@ function profileViewModel() {
             self.chatMessages.push({ chat_name: homeVM.user_data()['firstName'] + ' ' + homeVM.user_data()['lastName'] + ':', message: message });
         });
     };
+
+    self.addFriend = function(data, event) {
+        var contact_id = event.added.id;
+
+        $.ajax({
+            method: "POST",
+            dataType: 'json',
+            url: 'modules/addRelation.php',
+            data: {action: 'add', user_id: homeVM.user_data()['id'], contact_id: contact_id, relation: 'friend'}
+        }).done(function(result) {
+            c(result);
+        });
+    }
 }
