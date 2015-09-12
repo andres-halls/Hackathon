@@ -1,16 +1,46 @@
 <div id="profile_page" data-bind="if: loaded, visible: nav.currentView.view() == view && loaded">
     <div class="navbar navbar-default">
         <div class="container">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav" style="width: 100%;">
                 <div class="row">
-                    <div class="col-lg-8">
-                        <div class="input-group">
-		      <span class="input-group-btn">
-		        <button class="btn btn-default" type="button">Go!</button>
-		      </span>
-                            <input type="text" class="form-control" placeholder="Search for...">
-                        </div><!-- /input-group -->
-                    </div><!-- /.col-lg-6 -->
+                    <div class="col-lg-12">
+                        <input type="hidden" style="width: 100%;" class="select2 ajax"
+                               data-bind="
+                                select2: {
+                                    minimumInputLength: 2,
+                                    ajax: {
+                                        url: 'modules/search.php',
+                                        type: 'post',
+                                        dataType: 'json',
+                                        quietMillis: 200,
+                                        data: function(term) {
+                                            return {
+                                                names: term
+                                            };
+                                        },
+                                        results: function(data) {
+                                            return {
+                                                results: data
+                                            };
+                                        }
+                                    },
+                                    formatResult: function (item) {
+                                        return '<div style=\x22padding: 10px;\x22>' + item.text +
+                                        '<i class=\x22glyphicon glyphicon-plus pull-right\x22></i>' + '</div>';
+                                    },
+                                    formatSelection: function (item) {
+                                        $($element).select2('val', '');
+                                        return '';
+                                    },
+                                    initSelection: function (element, callback) {
+                                        callback(element.select2('data'));
+                                    },
+                                    escapeMarkup: function(m) { return m; }
+                                },
+                                event: { change: addFriend }
+                            ">
+                        </input>
+                    </div><!-- /.col-lg-12 -->
                 </div>
             </ul>
         </div>
@@ -36,5 +66,5 @@
 
     </div> <!-- /container -->
 
-    <?php require('components/chat.php'); ?>
+    <?php require('chat.php'); ?>
 </div>

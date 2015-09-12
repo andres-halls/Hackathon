@@ -28,6 +28,7 @@ var nav = Sammy(function()
     });
 
     self.get('', function() {
+        $('body').css('overflow', "hidden");
         self.currentView.view('#');
     });
 

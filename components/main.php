@@ -12,6 +12,11 @@
     <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap-theme.min.css"/>
     <script type="text/javascript" src="lib/bootstrap/bootstrap.min.js"></script>
 
+    <!-- Select2 -->
+    <link rel="stylesheet" type="text/css" href="lib/select2/select2.css" />
+    <link rel="stylesheet" type="text/css" href="lib/select2/select2-bootstrap.css" />
+    <script type="text/javascript" src="lib/select2/select2.min.js"></script>
+
     <!-- Bootstrap Material Design Theme -->
 <!--    <link rel="stylesheet" type="text/css" href="lib/bootstrap/material/roboto.min.css"/>-->
 <!--    <link rel="stylesheet" type="text/css" href="lib/bootstrap/material/material.min.css"/>-->
@@ -21,13 +26,12 @@
 
     <!-- Knockout -->
     <script type="text/javascript" src="lib/knockout-3.3.0.js"></script>
+    <script type="text/javascript" src="js/knockout-custom.js"></script>
 
     <!-- Sammy -->
     <script type="text/javascript" src="lib/sammy-0.7.6.min.js"></script>
 
-    <!-- Socket.io -->
-    <script type="text/javascript" src="lib/socket.io.js"></script>
-
+    <!-- SignWise -->
     <script type="text/javascript" src="lib/signwise.js"></script>
     <script type="text/javascript" src="lib/signwiseMobileId.js"></script>
 
