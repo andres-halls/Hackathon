@@ -9,8 +9,14 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap-theme.min.css"/>
     <script type="text/javascript" src="lib/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Bootstrap Material Design Theme -->
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/material/roboto.min.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/material/material.min.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/material/ripples.min.css"/>
+    <script type="text/javascript" src="lib/bootstrap/material/material.min.js"></script>
+    <script type="text/javascript" src="lib/bootstrap/material/ripples.min.js"></script>
 
     <!-- Knockout -->
     <script type="text/javascript" src="lib/knockout-3.3.0.js"></script>

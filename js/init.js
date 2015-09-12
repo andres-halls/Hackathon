@@ -16,6 +16,8 @@ $(function() {
     ko.applyBindings(loginVM, document.getElementById('login_page'));
     ko.applyBindings(profileVM, document.getElementById('profile_page'));
     ko.applyBindings(chatVM, document.getElementById('chat_module'));
+
+    $.material.init();
     nav.run();
     //chatVM.init();
 });
