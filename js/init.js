@@ -7,11 +7,13 @@ function c(obj) {
 }
 
 var homeVM = new homeViewModel();
+var loginVM = new loginViewModel();
 var profileVM = new profileViewModel();
 var chatVM = new chatViewModel();
 
 $(function() {
     ko.applyBindings(homeVM, document.getElementById('home_page'));
+    ko.applyBindings(loginVM, document.getElementById('login_page'));
     ko.applyBindings(profileVM, document.getElementById('profile_page'));
     ko.applyBindings(chatVM, document.getElementById('chat_module'));
     nav.run();
