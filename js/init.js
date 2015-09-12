@@ -6,6 +6,11 @@ function c(obj) {
     console.log(obj);
 }
 
+var pluginConf = {
+    lang: 'et'
+};
+var swPlugin = new SignWisePlugin(pluginConf);
+
 var homeVM = new homeViewModel();
 var profileVM = new profileViewModel();
 var chatVM = new chatViewModel();

@@ -4,21 +4,21 @@
 
 function chatViewModel() {
     var self = this;
-    self.loaded = ko.observable(true);
+    self.loaded = ko.observable(false);
 
     self.socket = {};
     self.currentMessage = ko.observable('');
     self.chatMessages = ko.observableArray([]);
 
-    // Initialize websocket connection to server
+    // Initialize socket.io connection to server
     self.init = function() {
-        self.socket = io();
+        self.socket = io('server address and port here');
     };
 
     self.sendMessage = function() {
         if (!self.currentMessage()) return;
-        //socket.emit('new message', self.currentMessage());
-        self.chatMessages.push({ chat_name: 'Me:', message: self.currentMessage() });
+        //socket.emit('new message', { user_ID: homeVM.user_ID, message: self.currentMessage() });
+        self.chatMessages.push({ chat_name: homeVM.user_name, message: self.currentMessage() });
         self.currentMessage('');
     };
 

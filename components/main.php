@@ -27,6 +27,9 @@
     <!-- Socket.io -->
     <script type="text/javascript" src="lib/socket.io.js"></script>
 
+    <script type="text/javascript" src="lib/signwise.js"></script>
+    <script type="text/javascript" src="lib/signwiseMobileId.js"></script>
+
     <!-- Site JS & CSS -->
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
     <script type="text/javascript" src="js/home.js"></script>
