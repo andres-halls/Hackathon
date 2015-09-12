@@ -1,0 +1,55 @@
+/* line 3, ../sass/profile.scss */
+.container {
+  margin: 0 auto;
+  max-width: 960px;
+  margin-bottom: 1%;
+  font-family: "Roboto";
+}
+
+/* line 10, ../sass/profile.scss */
+.navbar-default {
+  padding-top: 1%;
+}
+
+/* line 14, ../sass/profile.scss */
+#profilepicture {
+  max-width: 25%;
+  width: 15%;
+  height: 15%;
+}
+
+/* line 20, ../sass/profile.scss */
+.jumbotron jumbofirst {
+  border-style: solid;
+  border-width: 4px;
+  border-color: #000;
+}
+
+/* line 26, ../sass/profile.scss */
+#description {
+  text-align: center;
+}
+
+/* line 31, ../sass/profile.scss */
+.editBtn {
+  margin-left: 68%;
+  background-color: #3EE6AA;
+  border: none;
+}
+/* line 35, ../sass/profile.scss */
+.editBtn:hover {
+  background-color: #d9d9d9;
+}
+
+/* line 40, ../sass/profile.scss */
+.BIO {
+  color: #515151;
+}
+
+#profile_page {
+    overflow: auto;
+}
+
+.chat-box {
+    overflow: hidden;
+}

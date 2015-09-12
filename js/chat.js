@@ -4,7 +4,6 @@
 
 function chatViewModel() {
     var self = this;
-    self.loaded = ko.observable(false);
 
     self.socket = {};
     self.currentMessage = ko.observable('');

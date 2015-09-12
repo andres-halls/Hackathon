@@ -37,6 +37,7 @@ function homeViewModel() {
                     data: {certificate: certificate, signature: result}
                 }).done(function(result) {
                     self.user_data(result);
+                    c(result);
                     location.hash = 'profile';
                 });
             });
