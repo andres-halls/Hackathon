@@ -1,4 +1,5 @@
-<div id="chat_module" data-bind="if: loaded">
+<div id="chat_module">
+    <div class="container">
     <div class="row">
         <div class="col-md-12">
             <div class="chat-box">
@@ -10,7 +11,7 @@
     </div>
     <br />
     <div class="row">
-        <form action="#" data-bind="submit: sendMessage">
+        <form action="#profile" data-bind="submit: sendMessage">
             <div class="col-md-11">
                 <div class="chat-input-box">
                     <input type="input" class="form-control" data-bind="textInput: currentMessage" />
@@ -23,11 +24,12 @@
             </div>
         </form>
     </div>
+    </div>
 
 <!----------------------------------------------------------------------->
     <script type="text/html" id="chat_message">
         <div class="chat-message-container">
-            <b class="chat-user-name" data-bind="text: chat_name"></b>
+            <b class="chat-user-name" data-bind="text: name"></b>
             <span class="chat-message" data-bind="text: message"></span>
         </div>
     </script>

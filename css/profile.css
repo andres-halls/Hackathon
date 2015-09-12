@@ -45,3 +45,11 @@
 .BIO {
   color: #515151;
 }
+
+#profile_page {
+    overflow: auto;
+}
+
+.chat-box {
+    overflow: hidden;
+}

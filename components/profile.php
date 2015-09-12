@@ -35,4 +35,6 @@
         </div>
 
     </div> <!-- /container -->
+
+    <?php require('components/chat.php'); ?>
 </div>
