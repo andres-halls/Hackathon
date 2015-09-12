@@ -14,37 +14,87 @@
 	<body>
  
 <div class="navbar navbar-default">
-  <div class="container">
+  <div class="container-fluid">
     <ul class="nav navbar-nav">
 		<div class="row">
-		  <div class="col-lg-8">
-		    <div class="input-group">
-		      <span class="input-group-btn">
+		  <div class="col-lg-4">
+		    <div class="input-group ">
+		      <span class="input-group-btn ">
 		        <button class="btn btn-default" type="button">Go!</button>
 		      </span>
 		      <input type="text" class="form-control" placeholder="Search for...">
 		    </div><!-- /input-group -->
 		</div><!-- /.col-lg-6 -->
-  </div>
+	  </div>
+	</div>
 </div>
 
 <div class="container">
-  <div class="jumbotron jumbofirst">
-  	<div class="firstBox">
-	<img src="assets/images/Picture.png" class="img-responsive" id="profilepicture">
-<!--     <h6> REPUBLIC OF ESTONIA </h6>
-    <p>The Bootstrap 3 grid is fluid only. This example shows how to use a custom container to create a fixed width layout.</p> -->
-<!--     <img src="assets/images/textTMP.png" class="img-responsive">
- -->	</div>
- </div>
-
-
-
+  <div class="jumbotron jumbotronINFO">
+  	<div class="col-md-3">
+		<h4 class="profileHeading">REPUBLIC OF ESTONIA </h4>
+		<h5 class="profileDescription">SURNAME</h5>
+		<h5 class="profileDescription">FIRST NAME</h5>
+		<h5 class="profileDescription">SEX</h5>
+		<h5 class="profileDescription">DATE OF BIRTH</h5>
+	</div>
+	 	<div class="col-md-3">
+			<h5 class="profileDescription2">SURNAME</h5>
+			<h5 class="profileDescription2">FIRST NAME</h5>
+			<h5 class="profileDescription2">SEX</h5>
+			<h5 class="profileDescription2">DATE OF BIRTH</h5>
+	 	</div>
+		<div class="col-md-6">
+		<img src="assets/images/Picture.png" class="img-thumbnail profilePicture">
+	</div>		
+</div>
   <hr>
-  	<h1 class="lead" id="description">DESCRIPTION</h1>
-  <div class="jumbotron text-center">
-<h2 class="BIO">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus dolore rem amet aut cum beatae illo nisi tenetur assumenda, dignissimos ratione. Ipsa deserunt aliquam voluptas, consectetur excepturi suscipit. Enim, consequuntur.</h2>
-	<div class="btn btn-lg btn-success editBtn">Edit page</div>
+	  <div class="col-md-6">
+	  	<h1 class="lead" id="description">DESCRIPTION</h1>
+	  <div class="jumbotron text-center">
+	<h2 class="bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus dolore rem amet aut cum beatae illo nisi tenetur assumenda, dignissimos ratione. Ipsa deserunt aliquam voluptas, consectetur excepturi suscipit. Enim, consequuntur.</h2>
+		<div class="btn btn-lg btn-success editBtn">Edit page</div>
+ 	 </div>
+	</div>
+	
+	<!-- Chatbox -->
+
+	<div class="col-sm-6 chatBox">
+		<div class="container containerChatbox">
+		  <div class="header">
+		    <h2>Messages</h2>
+		    <a href="#" title="Add Friend to this chat">+</a>
+		  </div>
+		  <div class="chat-box">
+		    <div class="message-box left-img">
+		      <div class="picture">
+		        <img src="http://dribbble.s3.amazonaws.com/users/2493/avatars/original/joey_head_new.png?1346157876" title="user name"/>
+		        <span class="time">10 mins</span>
+		      </div>
+		      <div class="message">
+		        <span>Bobby Giangeruso</span>
+		        <p>Hey Mike, how are you doing?</p>
+		      </div>
+		    </div>
+		    <div class="message-box right-img">
+		      <div class="picture">
+		        <img src="http://dribbble.s3.amazonaws.com/users/212696/avatars/small/monogram_pixel_perfect.png?1359994784" title="user name"/>
+		        <span class="time">2 mins</span>
+		      </div>
+		      <div class="message">
+		        <span>Mike Moloney</span>
+		        <p>Pretty good, Eating nutella, nommommom</p>
+		      </div>
+		    </div>
+		    <div class="enter-message">
+		      <input type="text" placeholder="Enter your message.."/>
+		      <a href="#" class="send">Send</a>
+			    </div>
+			 </div>
+		  </div>
+	</div>	
+<!-- Chatbox end -->
+
   </div>
   
 </div> <!-- /container -->
