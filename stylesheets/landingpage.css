@@ -94,19 +94,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 @font-face {
   font-weight: 200;
   font-style: normal;
-  font-family: "Roboto";
+  font-family: "Montserrat";
   src: url("fonts/Roboto-Light.otf");
 }
 @font-face {
   font-weight: 400;
   font-style: normal;
-  font-family: "Roboto";
+  font-family: "Montserrat";
   src: url("fonts/Roboto-Regular.otf");
 }
 @font-face {
   font-weight: 700;
   font-style: normal;
-  font-family: "Roboto";
+  font-family: "Montserrat";
   src: url("fonts/Roboto-Bold.otf");
 }
 /* line 11, ../sass/landingpage.scss */
@@ -120,38 +120,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 body {
   padding: 0;
   margin: 0;
-  font: "Roboto";
-  /*REMOVE IN CLEAN CODE*/
-  overflow: hidden;
 }
-
-.overlay{
-  width: 34%;
-  /*REMOVE IN CLEAN CODE*/
-  height: 99999px;
-  min-height: 100%;
-  background-color: black;
-  opacity: 0.5;
-  display: inline-block;
-  float: right;
-}
-
-.heroContainer{
-  display: inline-block;
-}
-
 
 /* line 30, ../sass/landingpage.scss */
 .container-fluid {
   position: relative;
-  width: 66%;
-  margin: 0 auto;
 }
 /* line 33, ../sass/landingpage.scss */
 .container-fluid .heroContainer {
   position: relative;
   width: 66%;
-  margin-top: 5%;
 }
 /* line 37, ../sass/landingpage.scss */
 .container-fluid .heroContainer img.landingpage {
@@ -173,24 +151,6 @@ body {
   top: 0;
   left: 0;
 }
-#idLogo{
-  background: url("../assets/icons/idLogo.png");õ
-  -webkit-background-size: contain; 
-  -moz-background-size: contain; 
-  -o-background-size: contain; 
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 50px;
-  height: 50px;
-  display: inline-block;
-}
-.clickBaitContainer{
-  margin-top: 25px;
-}
-
-
-
-
 @media screen and (max-width: 1024px) {
   /* line 33, ../sass/landingpage.scss */
   .container-fluid .heroContainer {
@@ -206,46 +166,48 @@ body {
 /* line 64, ../sass/landingpage.scss */
 .container-fluid .heroContainer .companyName {
   position: relative;
-  font-family: "Roboto";
+  font-family: "Montserrat";
   color: #fff;
   font-size: 2em;
+  margin-left: 11%;
   margin-top: 8%;
 }
 /* line 74, ../sass/landingpage.scss */
 .container-fluid .heroContainer .companyHeader {
   position: relative;
-  font-family: "Roboto";
+  font-family: "Montserrat";
   color: #fff;
   font-size: 1em;
+  margin-left: 11%;
   margin-bottom: 10%;
 }
 /* line 84, ../sass/landingpage.scss */
 .container-fluid .heroContainer .Slogan {
   font-size: 3em;
+  text-align: center;
   margin-top: 8%;
   position: relative;
-  font-family: "Roboto";
+  font-family: "Montserrat";
   color: #fff;
 }
 /* line 93, ../sass/landingpage.scss */
 .container-fluid .heroContainer .Slogan2 {
   font-size: 3em;
+  text-align: center;
   position: relative;
-  font-family: "Roboto";
+  font-family: "Montserrat";
   color: #fff;
 }
 /* line 101, ../sass/landingpage.scss */
 .container-fluid .heroContainer .clickBait {
-    padding: 5px 5px;
-    min-width: 300px;
-
-    position: relative;
-    cursor: pointer;
-    border-radius: 10px;
-    color: #55ACEE;
-    font-size: 30px;
-    border: 0;
-    display: inline-block;
-    background-color: #fff;
-    top: -17px;
+  width: 81%;
+  height: 50px;
+  position: relative;
+  margin-left: 9%;
+  margin-top: 5%;
+  border-radius: 10px;
+  color: #55ACEE;
+  font-size: 2em;
+  border: 0;
+  background-color: #fff;
 }

@@ -1,4 +1,5 @@
-
+@import "compass/reset"; // RESET
+@import "fonts"; // LOCAL FONTS
 
 .container {
   margin: 0 auto;
@@ -73,7 +74,9 @@
 }
 
 // Chatbox
-
+.chatBox {
+  float: right;
+}
 .containerChatbox{
   display:block;
   margin:0 auto;
