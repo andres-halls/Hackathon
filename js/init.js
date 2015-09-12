@@ -20,7 +20,7 @@ $(function() {
     ko.applyBindings(profileVM, document.getElementById('profile_page'));
     //ko.applyBindings(chatVM, document.getElementById('chat_module'));
 
-    $.material.init();
+    //$.material.init();
     nav.run();
     //chatVM.init();
 });
