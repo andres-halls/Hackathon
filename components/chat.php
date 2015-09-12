@@ -1,36 +1,24 @@
 <div id="chat_module">
-    <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="chat-box">
+    <!-- Chatbox -->
+
+    <div class="col-sm-6 chatBox">
+        <div class="containerChatbox">
+            <div class="header">
+                <h2>Messages</h2>
+                <!--                    <a href="#" title="Add Friend to this chat">+</a>-->
+            </div>
+            <div class="chat-box" style="max-height: 300px; overflow: auto;">
                 <!-- ko foreach: chatMessages -->
                     <!-- ko template: { name: 'chat_message', data: $data } --><!-- /ko -->
                 <!-- /ko -->
-            </div>
-        </div>
-    </div>
-    <br />
-    <div class="row">
-        <form action="#profile" data-bind="submit: sendMessage">
-            <div class="col-md-11">
-                <div class="chat-input-box">
-                    <input type="input" class="form-control" data-bind="textInput: currentMessage" />
+                <div class="enter-message">
+                    <form action="#profile" data-bind="submit: sendMessage">
+                        <input type="text" placeholder="Enter your message.." data-bind="textInput: currentMessage"/>
+                        <a type="submit" href="#profile" class="send" data-bind="click: sendMessage">Send</a>
+                    </form>
                 </div>
             </div>
-            <div class="col-md-1">
-                <button type="submit" class="btn btn-primary"
-                        style="width: 100%;">Send
-                </button>
-            </div>
-        </form>
-    </div>
-    </div>
-
-<!----------------------------------------------------------------------->
-    <script type="text/html" id="chat_message">
-        <div class="chat-message-container">
-            <b class="chat-user-name" data-bind="text: name"></b>
-            <span class="chat-message" data-bind="text: message"></span>
         </div>
-    </script>
+    </div>
+    <!-- Chatbox end -->
 </div>

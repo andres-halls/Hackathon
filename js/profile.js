@@ -10,6 +10,8 @@ function profileViewModel() {
     self.socket = {};
     self.currentMessage = ko.observable('');
     self.chatMessages = ko.observableArray([]);
+    self.friends = ko.observableArray([]);
+    self.lastLength = 0;
 
     nav.currentView.view.subscribe(function(newView){
         if ( newView == self.view ) {
@@ -30,8 +32,8 @@ function profileViewModel() {
             dataType: 'json',
             url: 'modules/addRelation.php',
             data: {action: 'get', user_id: homeVM.user_data()['id']}
-        }).done(function(result) {
-            c(result);
+        }).done(function(result) {;
+            self.friends(result);
         });
 
         setInterval(function() {
@@ -42,6 +44,10 @@ function profileViewModel() {
                 data: {action: 'getMessages'}
             }).done(function(messages) {
                 self.chatMessages(messages);
+                if (self.lastLength != messages.length) {
+                    self.lastLength = messages.length;
+                    $('.chat-box').scrollTop($('.chat-box')[0].scrollHeight);
+                }
             });
         }, 1000);
     };
@@ -83,14 +89,15 @@ function profileViewModel() {
 
     self.addFriend = function(data, event) {
         var contact_id = event.added.id;
+        var name = event.added.text;
 
         $.ajax({
             method: "POST",
             dataType: 'json',
             url: 'modules/addRelation.php',
             data: {action: 'add', user_id: homeVM.user_data()['id'], contact_id: contact_id, relation: 'friend'}
-        }).done(function(result) {
-            c(result);
+        }).done(function(result) {;
+            self.friends.push({name: name});
         });
     }
 }
