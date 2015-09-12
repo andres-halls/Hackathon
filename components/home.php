@@ -12,18 +12,20 @@
 ?>
 
 <div id="home_page" data-bind="if: loaded, visible: nav.currentView.view() == view && loaded">
-    <div class="well">
-        <div class="row">
-            <div class="col-md-12">
-                <h2>Kiwi Network</h2>
+    <input type="hidden" id="smart_card_auth_challenge" disabled="disabled" value="<?php echo $_SESSION["smart_card_auth_challenge"]; ?>"/>
+
+    <div class="container-fluid">
+        <div class="heroContainer">
+            <img src="assets/images/LandingPage.png" class="landingpage">
+            <div class="companyInfo">
+                <h2 class="companyName"> eResNetwork </h2>
+                <h3 class="companyHeader"> Worlds most secure professional network platform </h3>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <button class="btn btn-primary" data-bind="click: login">Login</button>
-                <label><span>Random challenge</span> <input id="smart_card_auth_challenge" disabled="disabled" value="<?php echo $_SESSION["smart_card_auth_challenge"]; ?>"></label>
-                <p id="smart_card_auth_result"></p>
+            <div class="catchPhrase">
+                <h2 class="Slogan"> Stay safe with us </h2>
+                <h2 class="Slogan2"> Sign up with a ID card </h2>
             </div>
+            <button class="clickBait" data-bind="click: login">Let's Get Started!</button>
         </div>
     </div>
 </div>

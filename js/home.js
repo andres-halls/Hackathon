@@ -9,7 +9,6 @@ function homeViewModel() {
     self.user_data = ko.observable();
 
     self.smartCardAuth = function() {
-        console.log(this);
         function displaySmartCardError(err) {
             document.getElementById("smart_card_auth_result").innerHTML = err;
         }
@@ -19,7 +18,7 @@ function homeViewModel() {
                 displaySmartCardError('Error reading authentication certificates' + JSON.stringify(err));
                 return;
             }
-            console.log('Authentication certificates', result);
+            //console.log('Authentication certificates', result);
             var certificate = result[0];
 
             var challenge = document.getElementById("smart_card_auth_challenge").value;

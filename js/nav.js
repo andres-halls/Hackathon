@@ -11,7 +11,6 @@ var nav = Sammy(function()
     };
 
     self.get('#:view', function() {
-        c(this.params.view);
         self.currentView.view(this.params.view);
     });
 

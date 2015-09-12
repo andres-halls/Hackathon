@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Kiwi Network</title>
+    <title>ERES</title>
 
     <!-- jQuery -->
     <script type="text/javascript" src="lib/jquery/jquery-2.1.4.min.js"></script>
@@ -32,6 +32,7 @@
 
     <!-- Site JS & CSS -->
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="css/landingpage.css"/>
     <script type="text/javascript" src="js/home.js"></script>
     <script type="text/javascript" src="js/profile.js"></script>
     <script type="text/javascript" src="js/chat.js"></script>
