@@ -111,7 +111,7 @@ html {
   margin: 0;
 }
 
-/* line 9, ../sass/content.scss */
-.navbar-default {
-  background-color: #4d9ee3;
+/* line 10, ../sass/content.scss */
+.navbar-row {
+  padding-bottom: 5px;
 }
