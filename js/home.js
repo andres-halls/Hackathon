@@ -5,7 +5,7 @@
 function homeViewModel() {
     var self = this;
     self.view = '#';
-    self.loaded = ko.observable(false);
+    self.loaded = ko.observable(true);
     self.user_data = ko.observable();
 
     self.smartCardAuth = function() {

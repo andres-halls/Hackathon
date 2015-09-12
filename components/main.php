@@ -44,7 +44,7 @@
 
         require("components/home.php");
         require("components/profile.php");
-        require("components/chat.php");
+        //require("components/chat.php");
 
     ?>
 </div>
