@@ -1,7 +1,6 @@
-<div id="chat_module">
+<div id="chat_module" class="col-sm-6 chatBox">
     <!-- Chatbox -->
 
-    <div class="col-sm-6 chatBox">
         <div class="containerChatbox">
             <div class="header">
                 <h2>Messages</h2>
@@ -19,6 +18,5 @@
                 </div>
             </div>
         </div>
-    </div>
     <!-- Chatbox end -->
 </div>

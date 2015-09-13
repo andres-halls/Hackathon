@@ -243,12 +243,3 @@ body {
     background-color: #fff;
     top: -17px;
 }
-
-#signwise {
-    position: fixed;
-    bottom: 140px;
-    font-family: "Roboto";
-    color: #fff;
-    font-size: 1em;
-    margin-left: 20px;
-}

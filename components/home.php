@@ -26,6 +26,11 @@
                 <div class="catchPhrase">
                     <h2 class="Slogan"> Stay safe with us </h2>
                     <h2 class="Slogan2"> Sign up with an ID card </h2>
+                    <h3 class="companyHeader" style="margin-top: 20px;">
+                        Powered by SignWise. Get the
+                        <a href="https://www.signwise.me/p/about/plugin" target="_blank" style="color: red;">plugin</a>
+                        to register or log in!
+                    </h3>
                 </div>
                 <div class="clickBaitContainer">
                     <button class="clickBait" data-bind="click: login">Let's Get Started!</button>
@@ -33,10 +38,7 @@
                 </div>
             </div>
         </div>
-        <div class="overlay">
-            <div id="signwise">Powered by SignWise. Get the <a href="https://www.signwise.me/p/about/plugin" target="_blank">plugin!</a>
-            </div>
-        </div>
+        <div class="overlay"></div>
     </div>
 </div>
 

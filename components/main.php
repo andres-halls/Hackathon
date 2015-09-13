@@ -38,6 +38,7 @@
     <!-- Site JS & CSS -->
     <link rel="stylesheet" type="text/css" href="css/landingpage.css"/>
     <link rel="stylesheet" type="text/css" href="css/profile.css" >
+    <link rel="stylesheet" type="text/css" href="css/content.css" >
     <script type="text/javascript" src="js/home.js"></script>
     <script type="text/javascript" src="js/profile.js"></script>
     <script type="text/javascript" src="js/content.js"></script>

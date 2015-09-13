@@ -43,7 +43,7 @@
                         ">
                     </input>
                 </li>
-                <li style="margin-top: -5px; float: right;"><a href="#content">Content</a></li>
+                <li style="margin-top: -5px; float: right;"><a href="#content">News</a></li>
             </ul>
         </div>
     </div>
@@ -70,9 +70,14 @@
 
 
         <div class="jumbotron jumbotronINFO pull-right">
-            <h2 class="bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus dolore rem amet aut cum beatae illo nisi tenetur assumenda, dignissimos ratione. Ipsa deserunt aliquam voluptas, consectetur excepturi suscipit. Enim, consequuntur.</h2>
+            <!-- ko if: descEditable() -->
+                <textarea class="form-control" rows="3" data-bind="textInput: description" style="resize: vertical;"></textarea>
+            <!-- /ko -->
+            <!-- ko ifnot: descEditable() -->
+                <div class="bio" style="white-space: pre-line;" data-bind="text: description"></div>
+            <!-- /ko -->
             <br/>
-            <div class="btn btn-lg btn-success">Edit</div>
+            <div class="btn btn-lg btn-success pull-right" data-bind="click: editButtonClick, text: descEditable() ? 'Save' : 'Edit Description'">Edit Description</div>
         </div>
 
 
@@ -80,6 +85,7 @@
         <hr>
         <br>
         <br>
+        <div class="row">
         <div class="col-md-6" id="connectionsBox">
             <div class="jumbotron">
 
@@ -93,7 +99,9 @@
                 </table>
             </div>
         </div>
+            <?php require('chat.php'); ?>
+        </div>
 
-        <?php require('chat.php'); ?>
+
     </div> <!-- /container -->
 </div>

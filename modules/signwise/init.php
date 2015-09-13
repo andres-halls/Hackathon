@@ -21,10 +21,10 @@ session_start();
 include "class.SignWise.php";
 $swConf = array(
   'server' => 'https://dtm-test.signwise.me/',
-  /*'certificate' => $_SERVER['DOCUMENT_ROOT'] . '/modules/signwise/cert1.crt',
-  'privateKey' => $_SERVER['DOCUMENT_ROOT'] . '/modules/signwise/private1.key',*/
-  'certificate' => 'F:\PhpstormProjects\kiwi\modules\signwise\cert1.crt',
-  'privateKey' => 'F:\PhpstormProjects\kiwi\modules\signwise\private1.key',
+  'certificate' => $_SERVER['DOCUMENT_ROOT'] . '/modules/signwise/cert1.crt',
+  'privateKey' => $_SERVER['DOCUMENT_ROOT'] . '/modules/signwise/private1.key',
+  /*'certificate' => 'F:\PhpstormProjects\kiwi\modules\signwise\cert1.crt',
+  'privateKey' => 'F:\PhpstormProjects\kiwi\modules\signwise\private1.key',*/
   'defaultFileProxyUrl' => 'http://www.example.com/example-fileproxy.php?',
   'defaultContainerType' => 'bdoc',
 );

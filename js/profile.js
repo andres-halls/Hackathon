@@ -12,6 +12,8 @@ function profileViewModel() {
     self.chatMessages = ko.observableArray([]);
     self.friends = ko.observableArray([]);
     self.lastLength = 0;
+    self.descEditable = ko.observable(false);
+    self.description = ko.observable('');
 
     nav.currentView.view.subscribe(function(newView){
         if ( newView == self.view ) {
@@ -33,8 +35,16 @@ function profileViewModel() {
             url: 'modules/addRelation.php',
             data: {action: 'get', user_id: homeVM.user_data()['id']}
         }).done(function(result) {
-            c(result);
             self.friends(result);
+        });
+
+        $.ajax({
+            method: "POST",
+            dataType: 'json',
+            url: 'modules/editProfile.php',
+            data: {action: 'get', user_id: homeVM.user_data()['id']}
+        }).done(function(result) {
+            self.description(result['description']);
         });
 
         setInterval(function() {
@@ -111,4 +121,20 @@ function profileViewModel() {
             return 'Male';
         }
     });
+
+    self.editButtonClick = function() {
+        if (!self.descEditable()) {
+            self.descEditable(true);
+            return;
+        }
+
+        self.descEditable(false);
+
+        $.ajax({
+            method: "POST",
+            dataType: 'json',
+            url: 'modules/editProfile.php',
+            data: {action: 'update', user_id: homeVM.user_data()['id'], description: self.description()}
+        });
+    }
 }
