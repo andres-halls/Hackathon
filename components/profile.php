@@ -2,9 +2,7 @@
     <div class="navbar navbar-default">
         <div class="container">
             <ul class="nav navbar-nav" style="width: 100%;">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <input type="hidden" style="width: 100%;" class="select2 ajax"
+                <li style="width: 80%;"><input type="hidden" style="width: 100%;" class="select2 ajax"
                                data-bind="
                                 select2: {
                                     minimumInputLength: 2,
@@ -42,9 +40,8 @@
                                 },
                                 event: { change: addFriend }
                             ">
-                        </input>
-                    </div><!-- /.col-lg-12 -->
-                </div>
+                        </input></li>
+                <li style="margin-top: -5px; float: right;"><a href="#content">Content</a></li>
             </ul>
         </div>
     </div>
@@ -52,21 +49,22 @@
     <div class="container">
         <div class="jumbotron jumbotronINFO">
             <div class="col-md-6">
-                <img src="assets/images/Picture.png" class="img-thumbnail profilePicture">
+                <img src="assets/images/default_profile.jpg" class="img-thumbnail profilePicture">
             </div>
             <div class="col-md-3">
+                <img src="assets/images/Flag.png" style="margin-bottom: 10px;"/>
                 <h5 class="profileDescription">NAME</h5>
                 <h5 class="profileDescription">SEX</h5>
                 <h5 class="profileDescription">DATE OF BIRTH</h5>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3" style="margin-top: 58px;">
                 <h5 class="profileDescription2" data-bind="text: homeVM.user_data()['firstName'] + ' ' + homeVM.user_data()['lastName']"></h5>
-                <h5 class="profileDescription2">SEX</h5>
-                <h5 class="profileDescription2">DATE OF BIRTH</h5>
+                <h5 class="profileDescription2" data-bind="text: calcSex"></h5>
+                <h5 class="profileDescription2" data-bind="text: homeVM.user_data()['DateOfBirth']"></h5>
             </div>
             <div class="col-md-6">
                 <br/><br/>
-                <h3>Friends:</h3><br/>
+                <h3>Contacts:</h3><br/>
                 <table class="table table-bordered table-hover">
                     <tbody data-bind="foreach: friends">
                         <tr>

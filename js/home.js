@@ -6,6 +6,7 @@ function homeViewModel() {
     var self = this;
     self.view = '#';
     self.loaded = ko.observable(true);
+    self.auth_done = ko.observable(false);
     self.user_data = ko.observable();
 
     self.smartCardAuth = function() {
@@ -36,6 +37,7 @@ function homeViewModel() {
                     url: 'modules/signwise/smart_card_auth.php',
                     data: {certificate: certificate, signature: result}
                 }).done(function(result) {
+                    self.auth_done(true);
                     self.user_data(result);
                     c(result);
                     location.hash = 'profile';

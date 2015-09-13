@@ -11,6 +11,12 @@ var nav = Sammy(function()
     };
 
     self.get('#:view', function() {
+        if ((this.params.view == 'profile' || this.params.view == 'content') && !homeVM.auth_done()) {
+            self.currentView.view('#');
+            location.hash = '';
+            return;
+        }
+
         self.currentView.view(this.params.view);
     });
 

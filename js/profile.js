@@ -90,14 +90,24 @@ function profileViewModel() {
     self.addFriend = function(data, event) {
         var contact_id = event.added.id;
         var name = event.added.text;
+        self.friends.push({name: name});
 
         $.ajax({
             method: "POST",
             dataType: 'json',
             url: 'modules/addRelation.php',
             data: {action: 'add', user_id: homeVM.user_data()['id'], contact_id: contact_id, relation: 'friend'}
-        }).done(function(result) {;
-            self.friends.push({name: name});
         });
-    }
+    };
+
+    self.calcSex = ko.pureComputed(function() {
+        var checkNum = String(homeVM.user_data()['identificationCode']).charAt(0);
+        checkNum = Number(checkNum);
+
+        if (checkNum % 2 == 0) {
+            return 'Female';
+        } else {
+            return 'Male';
+        }
+    });
 }

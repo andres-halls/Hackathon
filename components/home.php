@@ -33,7 +33,10 @@
                 </div>
             </div>
         </div>
-        <div class="overlay"></div>
+        <div class="overlay">
+            <div id="signwise">Powered by SignWise. Get the <a href="https://www.signwise.me/p/about/plugin" target="_blank">plugin!</a>
+            </div>
+        </div>
     </div>
 </div>
 

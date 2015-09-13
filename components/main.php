@@ -40,6 +40,7 @@
     <link rel="stylesheet" type="text/css" href="css/profile.css" >
     <script type="text/javascript" src="js/home.js"></script>
     <script type="text/javascript" src="js/profile.js"></script>
+    <script type="text/javascript" src="js/content.js"></script>
 <!--    <script type="text/javascript" src="js/chat.js"></script>-->
     <script type="text/javascript" src="js/nav.js"></script>
     <script type="text/javascript" src="js/init.js"></script>
@@ -50,6 +51,7 @@
 
         require("components/home.php");
         require("components/profile.php");
+        require("components/content.php");
 
     ?>
 </div>
