@@ -245,8 +245,8 @@ body {
 }
 
 #signwise {
-    position: absolute;
-    top: 800px;
+    position: fixed;
+    bottom: 140px;
     font-family: "Roboto";
     color: #fff;
     font-size: 1em;

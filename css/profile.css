@@ -182,7 +182,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 /* line 68, ../sass/profile.scss */
 .jumbotronINFO {
-  height: 27em;
+    display: inline-block;
+    height: 13em;
+    width: 48%;
+    padding: 20px!important;
 }
 
 /* line 72, ../sass/profile.scss */
@@ -348,3 +351,25 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 div.message.other {
     background-color: #C7E1FF;
 }
+#profileImage {
+    background-image: url("../assets/images/Picture.png");
+    height: 100px;
+    position: relative;
+    background-position: center;
+
+}
+
+.personInfo {
+    font-size: 13px;
+}
+
+
+#connectionsBox {
+    height: 355px;
+}
+
+#connectionsBox > div {
+    height: 100%;
+}
+
+

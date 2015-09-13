@@ -50,7 +50,7 @@ if (isset($_POST["signature"])) {
         else {
             $q = 'INSERT INTO `users`(`id_code`, `name`, `dateofbirth`, `organization`) VALUES ("'.$idCode.'","'.$_SESSION['user']['firstName'].' '.$_SESSION['user']['lastName'].'","'.$dob.'","'.$country.'")';
             $res = mysql_query($q);
-            $user_ID = mysql_insert_id($res);
+            $user_ID = mysql_insert_id();
         }
 
         $_SESSION['user']['DateOfBirth'] = $dob;
