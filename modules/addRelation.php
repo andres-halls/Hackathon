@@ -25,8 +25,8 @@ mysql_select_db( 'c3kmm', $db ) or die( mysql_error() );
 if($action == 'get'){
 
     $q = 'SELECT u.name
-          FROM users_contacts AS uc
-          LEFT JOIN users AS u ON(uc.contact_id = u.id)
+          FROM users AS u
+          LEFT JOIN users_contacts AS uc ON(uc.contact_id = u.id)
           WHERE uc.user_id = "'.$user_id.'"';
 
     $res = mysql_query($q);

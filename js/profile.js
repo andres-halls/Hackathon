@@ -32,7 +32,8 @@ function profileViewModel() {
             dataType: 'json',
             url: 'modules/addRelation.php',
             data: {action: 'get', user_id: homeVM.user_data()['id']}
-        }).done(function(result) {;
+        }).done(function(result) {
+            c(result);
             self.friends(result);
         });
 

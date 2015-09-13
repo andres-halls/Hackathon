@@ -86,9 +86,9 @@
                 <h3>Connections:</h3><br/>
                 <table class="table table-bordered table-hover">
                     <tbody data-bind="foreach: friends">
-                    <tr>
-                        <td data-bind="text: name"></td>
-                    </tr>
+                        <tr>
+                            <td data-bind="text: name"></td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
